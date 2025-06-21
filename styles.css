@@ -1,27 +1,20 @@
-.container {
-  width: 70%;
-  margin: auto;
-  text-align: center;
-}
-
-.dice {
-  text-align: center;
-  display: inline-block;
-}
-
-.dice-container {
-  display: flex;
-  justify-content: center;
-  gap: 40px;
-  margin-bottom: 20px;
-}
-
 body {
   background-color: #393E46;
+  margin: 0;
+  padding: 0;
+  font-family: 'Indie Flower', cursive;
+}
+
+.container {
+  width: 100%;
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+  text-align: center;
 }
 
 h1 {
-  margin: 20px;
+  margin: 30px 10px;
   font-family: 'Lobster', cursive;
   text-shadow: 5px 0 #232931;
   font-size: 6rem;
@@ -29,20 +22,35 @@ h1 {
 }
 
 h2#result {
-  font-family: 'Indie Flower', cursive;
-  color: #FFD700;
-  font-size: 2.5rem;
+  font-size: 2rem;
+  color: #FFD700;  /* 💛 Light Yellow (Gold) */
   margin-bottom: 20px;
+}
+
+.dice-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.dice {
+  flex: 1 1 150px;
+  max-width: 200px;
+  text-align: center;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  max-width: 150px;
 }
 
 p {
   font-size: 2rem;
   color: #4ECCA3;
-  font-family: 'Indie Flower', cursive;
-}
-
-img {
-  width: 80%;
 }
 
 button {
@@ -71,34 +79,59 @@ button:active {
 .footer {
   margin-top: 50px;
   padding: 15px;
-  background-color: #232931;
   color: #EEEEEE;
   text-align: center;
   font-family: 'Indie Flower', cursive;
+  background-color: #232931;
   font-size: 1rem;
 }
 
-.footer .social-icons {
-  margin: 15px 0;
-}
-
-.footer .social-icons a {
+.footer a {
   color: #4ECCA3;
-  font-size: 28px;
-  margin: 0 10px;
   text-decoration: none;
-  transition: transform 0.2s ease;
+  margin: 0 8px;
 }
 
-.footer .social-icons a:hover {
-  transform: scale(1.3);
+.footer a:hover {
+  text-decoration: underline;
 }
 
-.footer-content h3 {
-  margin-bottom: 10px;
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.social-icons {
+  margin: 10px 0;
   font-size: 1.5rem;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
 }
 
-.footer-content p {
-  font-size: 1rem;
+.social-icons a {
+  margin: 0 10px;
+}
+
+/* ✅ Responsive adjustments for small screens */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 3rem;
+  }
+
+  h2#result {
+    font-size: 1.5rem;
+  }
+
+  .dice-container {
+    gap: 10px;
+  }
+
+  button {
+    padding: 12px 20px;
+    font-size: 1.2rem;
+  }
 }
